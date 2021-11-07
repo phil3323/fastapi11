@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="../static/client.js"></script>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div>
+      <div class="center">
+        <div class="title">胸腔X光肺結節偵測</div>
+        <p>
+          請上傳一張胸腔X光照片
+        </p>
+        <div class="container">
+          <div class="no-display">
+            <input
+              id="file-input"
+              class="no-display"
+              type="file"
+              name="file"
+              accept="image/*"
+              onchange="showPicked(this)"
+            />
+          </div>
+          <button
+            class="choose-file-button"
+            type="button"
+            onclick="showPicker()"
+          >
+            選擇圖片
+          </button>
+          <div class="upload-label">
+            <label id="upload-label">No file chosen</label>
+          </div>
+          <div>
+            <img
+              id="image-picked"
+              class="no-display"
+              alt="Chosen Image"
+              height="200"
+            />
+          </div>
+          <div class="analyze">
+            <button
+              id="analyze-button"
+              class="analyze-button"
+              type="button"
+              onclick="analyze()"
+            >
+              進行分析
+            </button>
+          </div>
+          <div class="result-label">
+            <label id="result-label"></label>
+          </div>
+          <div class="info-container no-display">
+            <p>Mfg: <span id="meter-mfg"></span></p>
+            <p>Model: <span id="meter-model"></span></p>
+            <p>Hazmat: <span id="meter-hazmat"></span></p>
+            <div class="table-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>      
+  </body>
+</html>

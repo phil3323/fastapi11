@@ -1,0 +1,5 @@
+fastai>=2.5.3
+fastapi[all]
+asyncio
+aiohttp
+aiofiles
